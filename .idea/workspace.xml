@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4873268d-0db7-42bf-bc83-0e7c8811ccd5" name="Default Changelist" comment="" />
+    <list default="true" id="4873268d-0db7-42bf-bc83-0e7c8811ccd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/credentials.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/cloudnote.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Note.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Result.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/Sqlite3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/constant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/EthDatabase.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/EthDatabase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/TestEthDatabase.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/TestEthDatabase.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +30,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1nCnaPSqwUvIk2ZAqLIvDsa9qeq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,9 +45,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/db" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -33,6 +56,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\NodejsProgram\cloudnote\db" />
       <recent name="E:\NodejsProgram\cloudnote\test" />
       <recent name="E:\NodejsProgram\cloudnote\contract" />
     </key>
@@ -69,7 +93,9 @@
       <workItem from="1611037383032" duration="13825000" />
       <workItem from="1611053023194" duration="81000" />
       <workItem from="1611053145429" duration="5717000" />
-      <workItem from="1611059072998" duration="12022000" />
+      <workItem from="1611059072998" duration="29086000" />
+      <workItem from="1611131938227" duration="1340000" />
+      <workItem from="1611133976625" duration="7353000" />
     </task>
     <servers />
   </component>
@@ -77,30 +103,38 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="384" y="186" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611003861860">
+    <state x="274" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611073101007">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="384" y="186" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1611003861860" />
+    <state x="274" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1611073101007" />
+    <state x="384" y="186" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611087685058">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="384" y="186" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1611087685058" />
+    <state x="419" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1611077441613">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="419" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.768@0.0.1366.768" timestamp="1611077441613" />
     <state x="463" y="138" key="FileChooserDialogImpl" timestamp="1611054926134">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1611054926134" />
-    <state width="1322" height="321" key="GridCell.Tab.0.bottom" timestamp="1611070577436">
+    <state width="1322" height="249" key="GridCell.Tab.0.bottom" timestamp="1611141341120">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="321" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1611070577436" />
-    <state width="1322" height="321" key="GridCell.Tab.0.center" timestamp="1611070577435">
+    <state width="1322" height="249" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1611141341120" />
+    <state width="1322" height="249" key="GridCell.Tab.0.center" timestamp="1611141341120">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="321" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1611070577435" />
-    <state width="1322" height="321" key="GridCell.Tab.0.left" timestamp="1611070577435">
+    <state width="1322" height="249" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1611141341120" />
+    <state width="1322" height="249" key="GridCell.Tab.0.left" timestamp="1611141341120">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="321" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1611070577435" />
-    <state width="1322" height="321" key="GridCell.Tab.0.right" timestamp="1611070577435">
+    <state width="1322" height="249" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1611141341120" />
+    <state width="1322" height="249" key="GridCell.Tab.0.right" timestamp="1611141341120">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="321" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1611070577435" />
+    <state width="1322" height="249" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1611141341120" />
     <state width="1322" height="233" key="GridCell.Tab.1.bottom" timestamp="1611008520140">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -153,9 +187,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="339" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1611059415556" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611006478981">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611080244828">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611006478981" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611080244828" />
   </component>
 </project>

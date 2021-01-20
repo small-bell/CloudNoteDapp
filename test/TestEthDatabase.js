@@ -76,7 +76,7 @@ function testQueryTransactionStatus() {
  * 测试主函数
  */
 function testEthDb() {
-    // testInsert();
+    testInsert();
 
     // testUpdate();
 

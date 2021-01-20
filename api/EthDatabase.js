@@ -43,6 +43,7 @@ class EthDatabase {
         //     data: notefun
         // });
         // estimateGas = this.web3.utils.toHex(estimateGas);
+        // var nonce = global.getNextNonce();
         var nonce = global.getNextNonce();
         const privateKey = Buffer.from(config.privateKey,
             'hex');
