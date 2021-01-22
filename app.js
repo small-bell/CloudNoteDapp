@@ -18,7 +18,7 @@ new Promise((resolve, reject) => {
   var nonce = database.getNonce();
   resolve(nonce);
 }).then((nonce) => {
-  global.nonce = nonce -1;
+  global.nonce = nonce;
   global.getNextNonce = function () {
     global.nonce++;
     return '0x' + global.nonce.toString(16);

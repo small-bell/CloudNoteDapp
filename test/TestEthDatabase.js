@@ -48,7 +48,12 @@ function testInsert() {
  */
 function testUpdate() {
     var content = 'content: ' +  Math.random().toString(36).substr(2);
-    database.updateNote("zebrpnykk5o", "yf6fjxtbfb", content);
+    database.updateNote("zebrpnykk5o", "yf6fjxtbfb", content)
+        .then((result) => {
+            console.log(result);
+        }, (err) => {
+            console.log(err);
+        })
 }
 
 /**
@@ -76,9 +81,9 @@ function testQueryTransactionStatus() {
  * 测试主函数
  */
 function testEthDb() {
-    testInsert();
+    // testInsert();
 
-    // testUpdate();
+    testUpdate();
 
     // testGetNote();
 

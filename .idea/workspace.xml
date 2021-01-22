@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4873268d-0db7-42bf-bc83-0e7c8811ccd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/credentials.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/cloudnote.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Note.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Result.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/Sqlite3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/constant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/EthDatabase.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/EthDatabase.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/cloudnote.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/cloudnote.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
@@ -96,6 +89,10 @@
       <workItem from="1611059072998" duration="29086000" />
       <workItem from="1611131938227" duration="1340000" />
       <workItem from="1611133976625" duration="7353000" />
+      <workItem from="1611179693358" duration="5000" />
+      <workItem from="1611241424773" duration="877000" />
+      <workItem from="1611250843973" duration="193000" />
+      <workItem from="1611336081394" duration="7663000" />
     </task>
     <servers />
   </component>
@@ -119,22 +116,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1611054926134" />
-    <state width="1322" height="249" key="GridCell.Tab.0.bottom" timestamp="1611141341120">
+    <state width="1322" height="119" key="GridCell.Tab.0.bottom" timestamp="1611343761858">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="249" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1611141341120" />
-    <state width="1322" height="249" key="GridCell.Tab.0.center" timestamp="1611141341120">
+    <state width="1322" height="119" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1611343761858" />
+    <state width="1322" height="119" key="GridCell.Tab.0.center" timestamp="1611343761858">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="249" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1611141341120" />
-    <state width="1322" height="249" key="GridCell.Tab.0.left" timestamp="1611141341120">
+    <state width="1322" height="119" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1611343761858" />
+    <state width="1322" height="119" key="GridCell.Tab.0.left" timestamp="1611343761857">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="249" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1611141341120" />
-    <state width="1322" height="249" key="GridCell.Tab.0.right" timestamp="1611141341120">
+    <state width="1322" height="119" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1611343761857" />
+    <state width="1322" height="119" key="GridCell.Tab.0.right" timestamp="1611343761858">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="249" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1611141341120" />
+    <state width="1322" height="119" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1611343761858" />
     <state width="1322" height="233" key="GridCell.Tab.1.bottom" timestamp="1611008520140">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -187,9 +184,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="339" y="167" key="run.anything.popup/0.0.1366.768@0.0.1366.768" timestamp="1611059415556" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611080244828">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1611338745157">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611080244828" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1611338745157" />
   </component>
 </project>

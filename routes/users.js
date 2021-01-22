@@ -12,14 +12,7 @@ var Result = require('../models/Result');
  * 测试
  */
 router.get('/', function(req, res, next) {
-  var t1 = {
-    1: "aaa",
-    2: "bbb",
-    3: "ccc"
-  }
-
-  console.log(`SELECT username, password from user WHERE 
-  username=${t1} and password=${t1}`);
+  res.send(new Result("测试").success());
 });
 
 /**
@@ -42,11 +35,7 @@ router.post('/register', function (req, res, next) {
   // 执行数据库操作
   db.insert('insert into user (username, password) ' +
       'values( ?, ?)', userItem);
-  res.send(new Result("Aaa").addItem({
-    "aaa":"aaa"
-  }).addItem({
-    "bbb": "bbb"
-  }));
+  res.send(new Result("注册成功").success());
 });
 
 /**
@@ -71,12 +60,12 @@ router.post('/login', function (req, res, next) {
     var cookie = crypto.createHash('sha1').update(form.username
       + '-' + form.password).digest("hex");
     res.cookie('login', cookie,
-        { expires: new Date(Date.now() + 900000),
+        { expires: new Date(Date.now() + 2000000),
           httpOnly: true });
     res.cookie('username', form.username,
-        { expires: new Date(Date.now() + 900000),
+        { expires: new Date(Date.now() + 2000000),
           httpOnly: true });
-    res.send("login");
+    res.send(new Result("登录成功").success());
   }, (err) => {
     console.log(err);
     res.send(new Result("登录错误").fail());
