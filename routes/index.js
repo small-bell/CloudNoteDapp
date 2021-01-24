@@ -72,6 +72,32 @@ router.get('/test', function (req, res, next) {
 /**
  * 发布笔记
  */
+/**,
+ * @swagger
+ * /note:
+ *    post:
+ *      tags:
+ *      - 以太坊接口
+ *      summary: 发布笔记
+ *      produces:
+ *      - application/json
+ *      parameters:
+ *      - title: title
+ *        description: 文章标题
+ *        required: true
+ *        type: string
+ *      - content: content
+ *        description: 文章内容
+ *        required: true
+ *        type: string
+ *      responses:
+ *        0:
+ *          description: 执行成功
+ *        -1:
+ *          description: 执行失败
+ *        404:
+ *          description: 未找到路径
+ * */
 router.post('/note', function (req, res, next) {
   var username = req.cookies.username;
   if (!username) {
@@ -116,6 +142,32 @@ router.post('/note', function (req, res, next) {
 /**
  * 修改笔记
  */
+/**,
+ * @swagger
+ * /change:
+ *    post:
+ *      tags:
+ *      - 以太坊接口
+ *      summary: 修改笔记
+ *      produces:
+ *      - application/json
+ *      parameters:
+ *      - title: title
+ *        description: 文章标题
+ *        required: true
+ *        type: string
+ *      - content: content
+ *        description: 文章内容
+ *        required: true
+ *        type: string
+ *      responses:
+ *        0:
+ *          description: 执行成功
+ *        -1:
+ *          description: 执行失败
+ *        404:
+ *          description: 未找到路径
+ * */
 router.post('/change', function (req, res, next) {
   var username = req.cookies.username;
   if (!username) {
@@ -159,6 +211,28 @@ router.post('/change', function (req, res, next) {
 /**
  * 查询笔记
  */
+/**,
+ * @swagger
+ * /query:
+ *    get:
+ *      tags:
+ *      - 以太坊接口
+ *      summary: 查询笔记
+ *      produces:
+ *      - application/json
+ *      parameters:
+ *      - title: title
+ *        description: 文章标题
+ *        required: true
+ *        type: string
+ *      responses:
+ *        0:
+ *          description: 执行成功
+ *        -1:
+ *          description: 执行失败
+ *        404:
+ *          description: 未找到路径
+ * */
 router.get('/query', function (req, res, next) {
   var username = req.cookies.username;
   if (!username) {
@@ -168,8 +242,8 @@ router.get('/query', function (req, res, next) {
   }
   global.database.getNote(username, req.query.title)
       .then((result) => {
-        console.log(result);
-        res.send(new Result("操作成功").addItem(result).success());
+        console.log(JSON.stringify(result));
+        res.send(new Result("操作成功", result).success());
       }, (err) => {
         console.log(err);
         res.send(new Result("操作以太坊失败,请重试").fail());

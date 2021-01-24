@@ -30,7 +30,11 @@ new Promise((resolve, reject) => {
 /////////////////////////////////////////////////
 var app = express();
 
+// 接口文档
+var swaggerInstall = require('./utils/swagger')
+swaggerInstall(app)
 
+// 跨域
 var cors = require('cors');
 app.use(cors());
 

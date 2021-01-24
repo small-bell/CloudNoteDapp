@@ -18,6 +18,32 @@ router.get('/', function(req, res, next) {
 /**
  * 注册
  */
+/**,
+ * @swagger
+ * /users/register:
+ *    post:
+ *      tags:
+ *      - 用户接口
+ *      summary: 用户注册
+ *      produces:
+ *      - application/json
+ *      parameters:
+ *      - username: username
+ *        description: 用户名
+ *        required: true
+ *        type: string
+ *      - password: password
+ *        description: 密码
+ *        required: true
+ *        type: string
+ *      responses:
+ *        0:
+ *          description: 注册成功
+ *        -1:
+ *          description: 注册失败
+ *        404:
+ *          description: 未找到路径
+ * */
 router.post('/register', function (req, res, next) {
   var form = req.body;
   if (!(form.username && form.password)){
@@ -41,6 +67,32 @@ router.post('/register', function (req, res, next) {
 /**
  * 登录
  */
+/**,
+ * @swagger
+ * /users/login:
+ *    post:
+ *      tags:
+ *      - 用户接口
+ *      summary: 用户登录
+ *      produces:
+ *      - application/json
+ *      parameters:
+ *      - username: username
+ *        description: 用户名
+ *        required: true
+ *        type: string
+ *      - password: password
+ *        description: 密码
+ *        required: true
+ *        type: string
+ *      responses:
+ *        0:
+ *          description: 登录成功
+ *        -1:
+ *          description: 登录失败
+ *        404:
+ *          description: 未找到路径
+ * */
 router.post('/login', function (req, res, next) {
   var form = req.body;
   if (!(form.username && form.password)){

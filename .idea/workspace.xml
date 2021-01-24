@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4873268d-0db7-42bf-bc83-0e7c8811ccd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/Log.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/swagger/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/cloudnote.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/cloudnote.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +98,7 @@
       <workItem from="1611413321823" duration="665000" />
       <workItem from="1611433669554" duration="4254000" />
       <workItem from="1611466596888" duration="6141000" />
+      <workItem from="1611491948811" duration="1403000" />
     </task>
     <servers />
   </component>
@@ -122,22 +122,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="138" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1611054926134" />
-    <state width="1322" height="241" key="GridCell.Tab.0.bottom" timestamp="1611490617886">
+    <state width="1322" height="319" key="GridCell.Tab.0.bottom" timestamp="1611493353787">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="241" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1611490617886" />
-    <state width="1322" height="241" key="GridCell.Tab.0.center" timestamp="1611490617886">
+    <state width="1322" height="319" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1611493353787" />
+    <state width="1322" height="319" key="GridCell.Tab.0.center" timestamp="1611493353786">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="241" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1611490617886" />
-    <state width="1322" height="241" key="GridCell.Tab.0.left" timestamp="1611490617885">
+    <state width="1322" height="319" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1611493353786" />
+    <state width="1322" height="319" key="GridCell.Tab.0.left" timestamp="1611493353786">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="241" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1611490617885" />
-    <state width="1322" height="241" key="GridCell.Tab.0.right" timestamp="1611490617886">
+    <state width="1322" height="319" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1611493353786" />
+    <state width="1322" height="319" key="GridCell.Tab.0.right" timestamp="1611493353786">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="241" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1611490617886" />
+    <state width="1322" height="319" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1611493353786" />
     <state width="1322" height="233" key="GridCell.Tab.1.bottom" timestamp="1611437950543">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
