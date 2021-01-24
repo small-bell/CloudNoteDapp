@@ -1,14 +1,14 @@
 // 对以太坊的操作
 // 因为每次以太坊操作后都会出现nonce不匹配的问题，
 // 并且耗时操作需要异步执行，所以先返回等待操作的消息
-
 var express = require('express');
 var router = express.Router();
+const moment = require('moment');
+const Log = require('../utils/Log');
 
 var Result = require('../models/Result');
 var Note = require('../models/Note');
 
-const moment = require('moment')
 var Sqlite3 = require('../utils/Sqlite3');
 var db = Sqlite3.getInstance();
 db.connect('E:\\NodejsProgram\\cloudnote\\db\\cloudnote.db');
@@ -16,12 +16,23 @@ db.connect('E:\\NodejsProgram\\cloudnote\\db\\cloudnote.db');
 /**
  * 注册socket查询
  */
-var io = require('../app').io;
-io.on("query", function (data) {
-  //TODO
-  db.query()
-  io.emit("news", {hello:"router"});
-})
+io.on('connection', function (socket) {
+  socket.on('query', function (data) {
+    if (data.username && data.title) {
+      db.query(`SELECT address FROM note WHERE userid = '${data.username}' AND title = '${data.title}'`, function (res) {
+        if (res.length !== 0) {
+          socket.emit('success', { code: 1, data: {
+              username: data.username,
+              title: data.title
+            }
+          });
+        } else {
+          socket.emit('fail', { code: 0 });
+        }
+      })
+    }
+  });
+});
 
 /**
  * 初始化全局主键和主键查询函数
@@ -42,7 +53,6 @@ function initGlobal(nonce) {
 function insertNote(note) {
   var currentTime =  moment(Date.now())
       .format('YYYY-MM-DD HH:mm:ss');
-  console.log(currentTime);
   db.runSql(`insert into note (userid, title, createdate, address) VALUES('${note.userId}', '${note.title}', '${currentTime}', '${note.address}')`);
 }
 /**
@@ -81,19 +91,24 @@ router.post('/note', function (req, res, next) {
       req.body.title,
       req.body.content
   );
+  Log.log('增加笔记');
+  Log.log(JSON.stringify(note));
   global.database.getNonce().then((res1) => {
     initGlobal(res1);
     // 发送交易
     global.database.addNote(username, note.title, note.content)
         .then((result) => {
-          console.log(result);
-          insertNote(note.addAddress("000"));
+          insertNote(note.addAddress(result.transactionHash));
+          Log.log('交易信息');
+          Log.log(JSON.stringify(result));
         }, (err) => {
-          console.log(err);
+          Log.log('交易失败');
+          Log.log(JSON.stringify(err));
         });
   }, (err) => {
     initGlobal(0);
-    console.log(err);
+    Log.log('交易失败');
+    Log.log(JSON.stringify(err));
   });
   res.send(new Result("等待操作").success());
 });
@@ -120,18 +135,23 @@ router.post('/change', function (req, res, next) {
       req.body.title,
       req.body.content
   );
+  Log.log('修改笔记');
+  Log.log(JSON.stringify(note));
   global.database.getNonce().then((res1) => {
     initGlobal(res1);
     // 发送交易
     global.database.updateNote(username, note.title, note.content)
         .then((result) => {
-          console.log(result);
+          Log.log('交易信息');
+          Log.log(JSON.stringify(result));
         }, (err) => {
-          console.log(err);
+          Log.log('交易失败');
+          Log.log(JSON.stringify(err));
         });
   }, (err) => {
     initGlobal(0);
-    console.log(err);
+    Log.log('交易失败');
+    Log.log(JSON.stringify(err));
   });
   res.send(new Result("等待操作").success());
 });

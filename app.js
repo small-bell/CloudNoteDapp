@@ -7,9 +7,6 @@ var logger = require('morgan');
 var http = require('http');
 var debug = require('debug')('cloudnote:server');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
 var credentials = require('./config/credentials');
 
 ////////////////初始化以太坊//////////////////////
@@ -34,7 +31,6 @@ new Promise((resolve, reject) => {
 var app = express();
 
 
-
 var cors = require('cors');
 app.use(cors());
 
@@ -52,7 +48,7 @@ var io = require('socket.io') (server,  {
     origin: '*',
   }
 });
-app.io = io;
+global.io = io;
 app.use(function(req, res, next){
   res.io = io;
   next();
@@ -84,7 +80,10 @@ app.use(function (req, res, next) {
     res.redirect('/');
   }
   next();
-})
+});
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -112,25 +111,24 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 
+io.on('connection', function (socket) {
 
-// io.on('connection', function (socket) {
-//
-//   socket.on('change', function (data) {
-//     console.log(data);
-//     setInterval(function () {
-//       socket.emit('news', { hello: "result" });
-//     }, 1000)
-//     // 发送交易
-//     global.database.updateNote("zebrpnykk5o", "yf6fjxtbfb", 'content: ' +  Math.random().toString(36).substr(2))
-//         .then((result) => {
-//           console.log(result);
-//           socket.emit('news', { hello: result });
-//         }, (err) => {
-//           console.log(err);
-//           socket.emit('news', { hello: err });
-//         });
-//   });
-// });
+  socket.on('change', function (data) {
+    console.log(data);
+    setInterval(function () {
+      socket.emit('news', { hello: "result" });
+    }, 1000)
+    // 发送交易
+    global.database.updateNote("zebrpnykk5o", "yf6fjxtbfb", 'content: ' +  Math.random().toString(36).substr(2))
+        .then((result) => {
+          console.log(result);
+          socket.emit('news', { hello: result });
+        }, (err) => {
+          console.log(err);
+          socket.emit('news', { hello: err });
+        });
+  });
+});
 
 /**
  * Listen on provided port, on all network interfaces.

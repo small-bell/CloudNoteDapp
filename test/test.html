@@ -8,8 +8,11 @@
 <body>
     <script type="text/javascript">
         var socket = io.connect("http://127.0.0.1:3000/");
-        socket.emit('change', { my: 'data' });
-        socket.on('news', function (data) {
+        socket.emit('query', { username: '1111', title: '1111' });
+        socket.on('success', function (data) {
+            console.log(data);
+        });
+        socket.on('fail', function (data) {
             console.log(data);
         });
     </script>
