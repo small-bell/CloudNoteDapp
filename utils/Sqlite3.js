@@ -57,6 +57,7 @@ class Sqlite3 {
     query(sql, callback) {
         this.db.all(sql, function(err, rows){
             if(null != err){
+                console.log(err);
                 console.log("sql error 查询出错！");
                 return;
             }

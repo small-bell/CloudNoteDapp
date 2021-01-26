@@ -100,8 +100,7 @@ router.post('/login', function (req, res, next) {
     return;
   }
   new Promise(((resolve, reject) => {
-    db.query(`SELECT username, password from user WHERE 
-    username=${form.username} and password=${form.password}`,
+    db.query(`SELECT username, password from user WHERE username='${form.username}' and password='${form.password}'`,
       (result) => {
           if (result) {
             resolve(result);
@@ -111,13 +110,18 @@ router.post('/login', function (req, res, next) {
     // 发放cookie
     var cookie = crypto.createHash('sha1').update(form.username
       + '-' + form.password).digest("hex");
+    res.setHeader('login', cookie);
+    res.setHeader('username', form.username);
     res.cookie('login', cookie,
         { expires: new Date(Date.now() + 2000000),
           httpOnly: true });
     res.cookie('username', form.username,
         { expires: new Date(Date.now() + 2000000),
           httpOnly: true });
-    res.send(new Result("登录成功").success());
+    res.send(new Result("登录成功").addItem({
+      login: cookie,
+      username: form.username
+    }).success());
   }, (err) => {
     console.log(err);
     res.send(new Result("登录错误").fail());

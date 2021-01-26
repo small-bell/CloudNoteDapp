@@ -99,7 +99,7 @@ router.get('/test', function (req, res, next) {
  *          description: 未找到路径
  * */
 router.post('/note', function (req, res, next) {
-  var username = req.cookies.username;
+  var username = req.headers.username;
   if (!username) {
     res.send(new Result('登录过期，请重新登陆').fail());
     res.redirect('/');
@@ -234,12 +234,13 @@ router.post('/change', function (req, res, next) {
  *          description: 未找到路径
  * */
 router.get('/query', function (req, res, next) {
-  var username = req.cookies.username;
+  var username = req.headers.username;
   if (!username) {
     res.send(new Result('登录过期，请重新登陆').fail());
     res.redirect('/');
     return;
   }
+  console.log(req.query.title)
   global.database.getNote(username, req.query.title)
       .then((result) => {
         console.log(JSON.stringify(result));

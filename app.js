@@ -78,7 +78,7 @@ app.use(function (req, res, next) {
     next();
     return;
   }
-  var login = req.cookies.login;
+  var login = req.headers.sign;
   //TODO 验证cookie
   if (!login && req.url !== '/') {
     res.redirect('/');
