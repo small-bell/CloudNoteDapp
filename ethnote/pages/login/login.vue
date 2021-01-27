@@ -40,7 +40,7 @@
 			this.username = uni.getStorageSync("username");
 			if (sign && this.username) {
 				// TODO 验证匹配
-				uni.navigateTo({
+				uni.redirectTo({
 					"url": "../index/index"
 				});
 			}
@@ -78,7 +78,7 @@
 						var body = res.data.data;
 						uni.setStorageSync("username", body.username);
 						uni.setStorageSync("sign", body.login);
-						uni.navigateTo({
+						uni.redirectTo({
 							"url": "../index/index"
 						});
 					},

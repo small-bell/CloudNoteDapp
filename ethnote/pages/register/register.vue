@@ -61,7 +61,7 @@
 						uni.showToast({
 							title: "注册成功"
 						});
-						uni.navigateTo({
+						uni.navigateBack({
 							"url": "../login/login"
 						});
 					},

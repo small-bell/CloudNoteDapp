@@ -101,11 +101,12 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		background: #377EB4;
 	}
 
 	.inputWrapper {
 		width: 80%;
-		height: 15vh;
+		height: 23vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -115,22 +116,22 @@
 		height: 8vh;
 		border-radius: 10vh;
 		text-align: center;
-		background-color: #007AFF;
+		background-color: #ffffff;
 	}
 	
 	.textareaWrapper {
-		height: 70vh;
-		background-color: #007AFF;
+		height: 67vh;
+		background-color: #ffffff;
 	}
 	
 	.textarea {
 		height: 10%;
-		background-color: #007AFF;
+		background-color: #ffffff;
 	}
 	
 	.submitWrapper {
 		width: 80%;
-		height: 15vh;
+		height: 13vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
